@@ -1,0 +1,208 @@
+@font-face {
+  font-family: 'MARK';
+  src: url('fonts/Mark-Pro.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MARKBOLD';
+  src: url('fonts/Mark-Pro-Bold.ttf') format('truetype');
+}
+
+p {
+    text-decoration: none;
+    font-family: "MARK";
+    font-size: 12px;
+}
+
+h1 {
+    font-family: "MARKBOLD";
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: -5px;
+}
+
+.Header {
+    position: fixed;
+    top: 0;
+        width: 60%;
+    justify-content: center;
+    background-color: #FFFFFF;
+    margin-left: 20%;
+    z-index: 1;
+    padding: 10px;
+}
+
+
+
+h2 {
+    text-decoration: none;
+    font-family: "MARK";
+    font-size: 11px;
+    max-width: 300px;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+/* Logo */
+
+.Logo {
+    float: left;
+    margin: 40px 50px;
+    transition-timing-function: ease-out;
+    transition-duration: 0.2s;
+}
+
+/* Navigation Bar*/
+
+ul.navinfo {
+	position:relative;
+  font-family: "MARK";
+  font-size: 12px;
+  text-align: right;
+  color: black;
+  padding: 50px;
+
+}
+ul.navinfo > li {
+  display: inline-block;
+  padding: 10px;
+  color: black;
+}
+ul.navinfo > li a {
+  color: black;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  padding: 10px 10px;
+  border: 1.5px solid transparent;
+}
+ul.nav {
+  position: relative;
+  font-family: "MARK";
+  letter-spacing: 0px;
+  font-size: 15px;
+  text-align: right;
+  color: black;
+  padding: 50px;
+}
+ul.nav > li {
+  display: inline-block;
+  padding: 2px;
+  color: black;
+}
+ul.nav > li a {
+  color: black;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+}
+
+@keyframes bg {
+    0% {
+        background-size:    0 1px,
+                            1px 0,
+                            0 1px,
+                            1px 0;
+    }
+    25% {
+        background-size:    100% 1px,
+                            1px 0,
+                            0 1px,
+                            1px 0;
+    }
+    50% {
+        background-size:    100% 1px,
+                            1px 100%,
+                            0 1px,
+                            1px 0;
+    }
+    75% {
+        background-size:    100% 1px,
+                            1px 100%,
+                            100% 1px,
+                            1px 0;
+    }
+    100% {
+        background-size:    100% 1px,
+                            1px 100%,
+                            100% 1px,
+                            1px 100%;
+    }
+}
+
+.Hover {
+    margin: 10px;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size:    100% 1px,
+                        1px 100%,
+                        100% 1px,
+                        1px 100%;
+    background-position:    0px 0,
+                            100% 0,
+                            100% 100%,
+                            0 100%;
+    animation-play-state: pause;
+}
+
+.Hover:hover {
+	background-image:   linear-gradient(to right, black 100%, black 100%),
+                        linear-gradient(to bottom, black 100%, black 100%),
+                        linear-gradient(to right, black 100%, black 100%),
+                        linear-gradient(to bottom, black 100%, black 100%);
+    animation-play-state: running;
+	animation: bg 0.75s cubic-bezier(0.19, 1, 0.22, 1) 1;
+}
+
+
+/* Portfolio Homepage */
+
+.container{
+    max-width: 55%;
+    margin: 125px auto auto auto;
+    padding: 40px 0;
+    position: relative;
+}
+
+.photo-gallery{
+    display: flex;
+    column-gap: 100px;
+}
+
+.collumn{
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+
+.imgcircle {
+        border-radius: 100px;
+}
+
+.photo {
+    overflow: hidden;
+}
+
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo img {
+    transition-duration: 0.3s;
+}
+
+.photo img:hover {
+    transform: scale(1.1)
+}
+
+
+@media(max-width:768px){
+    .photo-gallery{
+        flex-direction: column;
+    }
+}
